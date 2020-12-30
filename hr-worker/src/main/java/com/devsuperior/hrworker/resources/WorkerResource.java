@@ -39,5 +39,6 @@ public class WorkerResource {
         logger.info("PORT = " + env.getProperty("local.server.port"));
 
         return ResponseEntity.ok(repository.findById(id).get());
+
     }
 }
