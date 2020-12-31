@@ -29,6 +29,12 @@ public class WorkerResource {
     @GetMapping
     public ResponseEntity<List<Worker>> findAll() {
 
+       // try{
+         //   Thread.sleep(3000L);
+      //  }catch (InterruptedException e){
+         //   e.printStackTrace();
+       // }
+
         logger.info("PORT = " + env.getProperty("local.server.port"));
 
         return ResponseEntity.ok(repository.findAll());
