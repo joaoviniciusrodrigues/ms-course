@@ -27,4 +27,5 @@ public class UserResource {
             return ResponseEntity.status(HttpStatus.FOUND).build();
         }
     }
+
 }
