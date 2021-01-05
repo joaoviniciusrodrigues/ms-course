@@ -23,7 +23,7 @@ public class UserResource {
     }
 
     @GetMapping("/search")
-    public ResponseEntity<User> findById(@RequestParam("email") String email) {
+    public ResponseEntity<User> findByEmail(@RequestParam("email") String email) {
         return ResponseEntity.ok(repository.findByEmail(email));
 
     }
