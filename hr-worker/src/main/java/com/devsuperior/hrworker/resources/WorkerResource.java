@@ -23,8 +23,8 @@ public class WorkerResource {
 
     private static Logger logger = LoggerFactory.getLogger(WorkerResource.class);
 
-    @Value("${test.config}")
-    private String testConfig;
+    //@Value("${test.config}")
+   // private String testConfig;
 
     @Autowired
     private Environment env;
@@ -57,7 +57,7 @@ public class WorkerResource {
          //   e.printStackTrace();
        // }
 
-        logger.info("PORT = " + env.getProperty("local.server.port"));
+        //logger.info("PORT = " + env.getProperty("local.server.port"));
 
         return ResponseEntity.ok(repository.findAll());
     }
@@ -66,7 +66,7 @@ public class WorkerResource {
 
     @GetMapping("/{id}")
     public ResponseEntity<Worker> findById(@PathVariable Long id) {
-        logger.info("PORT = " + env.getProperty("local.server.port"));
+        //logger.info("PORT = " + env.getProperty("local.server.port"));
 
         return ResponseEntity.ok(repository.findById(id).get());
 
